@@ -1,11 +1,22 @@
 import boxes from './boxes'
-import React from "react"
+import React, { useState } from "react"
+import './style.css'
 
-function App()
+
+export default function App()
 {
+
+    const [squares, setSquares] = useState(boxes)
+    
+    const Boxelements = squares.map((square) =>(
+        <div>{square.id}</div>
+    ))
+    
     return(
-        <div>Hello World</div>
+        <div>
+           <Boxelements/>
+        </div>
     )
 }
 
-export default App
+ 
